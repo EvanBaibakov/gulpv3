@@ -1,23 +1,25 @@
 "use strict"
 
-const {src, dest} = require("gulp")
-const gulp = require("gulp")
-const autoprefixer = require("gulp-autoprefixer")
-const cssbeautify = require("gulp-cssbeautify");
-const removeComments = require('gulp-strip-css-comments');
-const rename = require("gulp-rename");
-const sass = require("gulp-sass")(require('sass'));
-const cssnano = require("gulp-cssnano");
-const uglify = require("gulp-uglify");
-const plumber = require("gulp-plumber");
+const {src, dest} = require("gulp") //  считывать записывать
+const gulp = require("gulp") // обьявляем понстанту и пишем рекваер
+const autoprefixer = require("gulp-autoprefixer") // сисс свойства вебкит
+const cssbeautify = require("gulp-cssbeautify"); // красивый сисс фаил
+const removeComments = require('gulp-strip-css-comments'); // удаляет коменты и минифицирует фаил сисс
+const rename = require("gulp-rename"); // переминивывает в мин сисс
+const sass = require("gulp-sass")(require('sass')); //gulp sass и модуль сасс еще
+const cssnano = require("gulp-cssnano"); // сжимает сисс фаил
+const uglify = require("gulp-uglify"); // минификация джис фаила
+const plumber = require("gulp-plumber"); //пламбер склеивает фалилы и в случае ощибок дает запуститься общему файил
 const rigger = require('gulp-rigger');// добавил в сборку самостоятельно так как не читался джиэс
-const panini = require("panini");
+const panini = require("panini"); // работа в шаблоне html
 const imagemin = require("gulp-imagemin");//immeyaem kartinki
-const del = require("del");
-const notify = require("gulp-notify")
-const browserSync = require("browser-sync").create(); 
+const del = require("del");  // не работает сжимает картинки проверить версионность прописать как делать откат версии
+// откат npm i gulp-imagemin@7.1.0 --save-dev
+const notify = require("gulp-notify") // плагин дел также надо проверять на корректность работы сборки либо откат до шестой версии
+const browserSync = require("browser-sync").create(); // локальный сервер и настройка параметров
 
-/*Paths пути*/
+
+/*Paths пути вместо етой команды обривеатура паф с приставкой*/
 const srcPath = "src/"
 const distPath = "dist/"
 
