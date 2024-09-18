@@ -1,17 +1,28 @@
+
 $theme-colors: (
-    "primary": blue,
-    "dark": #000000
-);
+    "primary": rgb(195, 255, 0),
+    "dark": #372b41b2
+); 
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-body {
-    padding-top: 56px;
-}
+
+ body {
+    padding-top: 5px;
+} 
 
 .footer {
-    margin-top:3rem;
-}
+    margin-top:10rem;
+    background-color: darken($color: #372b41b2, $amount: 0);
+} 
+
+/* верхняя менюшка 
  .navbar {
-    border-bottom:1px solid #eee ;
- }
+    border-bottom:1px solid #371f1f ;
+    background-color: rgb(117, 59, 156);
+    
+ } */
+
+
+
+ 

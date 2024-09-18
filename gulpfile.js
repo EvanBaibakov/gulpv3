@@ -1,4 +1,4 @@
-"use strict"
+"use strict" // строгий режим
 
 const {src, dest} = require("gulp") //  считывать записывать
 const gulp = require("gulp") // обьявляем понстанту и пишем рекваер
@@ -60,20 +60,21 @@ const path = {
 
 function html()  {
     panini.refresh()
-    return src(path.src.html, {base: srcPath})
+    return src(path.src.html, {base: srcPath}) // путь к html failu // base srcPath запасной вариант что ничего не ломалось 
         .pipe(plumber())
+        //пайп это метод задача срц считываем дест записываем
         .pipe(panini({
             root: srcPath,
             layouts: srcPath + "tpl/layouts/",
             partials: srcPath + "tpl/partials/",
             data: srcPath + "tpl/data/"
         }))
-        .pipe(dest(path.build.html))
+        .pipe(dest(path.build.html))//доставка куда доставить построенное 
         .pipe(browserSync.reload({stream: true}));
 }
 
 function css(){
-    return src(path.src.css, {base: srcPath + "assets/scss/"})
+    return src(path.src.css, {base: srcPath + "assets/scss/"}) //возращаем 
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({
@@ -83,25 +84,24 @@ function css(){
             this.emit('end');
             }
         }))
-
-        .pipe(sass())
+        .pipe(sass()) // из ссисс в сас
         .pipe(autoprefixer())
-        .pipe(cssbeautify())
+        .pipe(cssbeautify()) //красивая отрисовка
         .pipe(dest(path.build.css))
         .pipe(cssnano({
-            zindex: false,
-            discardComments: {
+            zindex: false, //не давать делать с с индексом ничего
+            discardComments: { 
                 removeAll: true
-            } 
-        }))
-        .pipe(removeComments())
+            } // само собой минифицированый фаил не читабельный поэтому коменты убераем
+        })) //приводит к супер уменшеному виду
+        .pipe(removeComments()) //удалять коменты будет
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
 
-        })) 
-        .pipe(dest(path.build.css))
-        .pipe(browserSync.reload({stream: true}));
+        })) // добавляем суфикс мин все логично в коде
+        .pipe(dest(path.build.css)) //в десте строим сисс с учетом паф
+        .pipe(browserSync.reload({stream: true}));0
 
 }
 
@@ -151,7 +151,7 @@ function fonts() {
 }
 
 function clean() {
-    return del(path.clean)
+    return del(path.clean) // используем функцию дел далее модуль паф и клин
 }
 
 function watchFiles() {
