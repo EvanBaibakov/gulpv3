@@ -8,20 +8,28 @@ $theme-colors: (
 
 
  body {
-    padding-top: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+     
 } 
+
+header {
+    margin-bottom: 50px;
+}
+
+
 
 .footer {
     margin-top:10rem;
     background-color: darken($color: #372b41b2, $amount: 0);
 } 
 
-/* верхняя менюшка 
+
  .navbar {
-    border-bottom:1px solid #371f1f ;
-    background-color: rgb(117, 59, 156);
+    border-bottom:200px solid #100e0f ;
+    background-color: rgb(18, 17, 18);
     
- } */
+ } 
 
 
 
