@@ -1,3 +1,2 @@
-//= components/script.js
-//= components/script2.js
+//= components/bootstrap.bundle.min.js
 //= components/script3.js
