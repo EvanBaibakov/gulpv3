@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />    
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>grid</title>
+    <link rel="icon" href="assets/images/vector/9-circle.svg" />
+    
+      </head>
+
+<body>
+    <header>
+        <nav class="navbar bg-dark border-bottom border-body">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Камни Мидгарда</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active " aria-current="page " href="./index.html">Начало</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="./about.html ">Смотрим</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Больше</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="./learn.html ">Познание</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./panini.html">Вдохновление</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </nav>    </header>
+    
+    <div class="w-25 p-3">Ширина 25%</div>
+    <div class="w-50 p-3">Ширина 50%</div>
+    <div class="w-75 p-3">Ширина 75%</div>
+    <div class="w-100 p-3">Ширина 100%</div>
+    <div class="w-auto p-3">Ширина auto</div>
+    
+    <div style="height: 100px;">
+      <div class="h-25 d-inline-block" style="width: 120px;">Высота 25%</div>
+      <div class="h-50 d-inline-block" style="width: 120px;">Высота 50%</div>
+      <div class="h-75 d-inline-block" style="width: 120px;">Высота 75%</div>
+      <div class="h-100 d-inline-block" style="width: 120px;">Высота 100%</div>
+      <div class="h-auto d-inline-block" style="width: 120px;">Высота авто</div>
+    </div>
+    
+    <div style="width: 50%; height: 100px;">
+      <div class="mw-100" style="width: 200%;">Максимальная ширина 100%</div>
+    </div>
+    
+    <div style="height: 100px;">
+      <div class="mh-100" style="width: 100px; height: 200px;">Максимальная высота 100%</div>
+    </div>
+    
+    <div class="container px-4 text-center">
+      <div class="row gx-5">
+        <div class="col">
+         <div class="p-3">Custom column padding</div>
+        </div>
+        <div class="col">
+          <div class="p-3">Custom column padding</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="position-relative">
+      <div class="position-absolute top-0 end-0 z-2 hover-effect-target opacity-0 mt-3 me-3">
+        <div class="d-flex flex-column gap-2">
+          <button type="button" class="btn btn-icon btn-secondary animate-pulse d-none d-lg-inline-flex" aria-label="Add to Wishlist">
+            <i class="ci-heart fs-base animate-target"></i>
+          </button>
+          <button type="button" class="btn btn-icon btn-secondary animate-rotate d-none d-lg-inline-flex" aria-label="Compare">
+            <i class="ci-refresh-cw fs-base animate-target"></i>
+          </button>
+        </div>
+      </div>
+      <div class="dropdown d-lg-none position-absolute top-0 end-0 z-2 mt-2 me-2">
+        <button type="button" class="btn btn-icon btn-sm btn-secondary bg-body" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More actions">
+          <i class="ci-more-vertical fs-lg"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end fs-xs p-2" style="min-width: auto">
+          <li>
+            <a class="dropdown-item" href="#!">
+              <i class="ci-heart fs-sm ms-n1 me-2"></i>
+              Add to Wishlist
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#!">
+              <i class="ci-refresh-cw fs-sm ms-n1 me-2"></i>
+              Compare
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="d-block rounded-top overflow-hidden p-3 p-sm-4" href="#">
+        <div class="ratio" style="--cz-aspect-ratio: calc(240 / 258 * 100%)">
+          <img src="assets/images/vizual/bsart (11).jpg" alt="Wireless Buds">
+        </div>
+      </a>
+    </div>
+    <div class="w-100 min-w-0 px-1 pb-2 px-sm-3 pb-sm-3">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <div class="d-flex gap-1 fs-xs">
+          <i class="ci-star-filled text-warning"></i>
+          <i class="ci-star-filled text-warning"></i>
+          <i class="ci-star-filled text-warning"></i>
+          <i class="ci-star-filled text-warning"></i>
+          <i class="ci-star-half text-warning"></i>
+        </div>
+        <span class="text-body-tertiary fs-xs">(14)</span>
+      </div>
+      <h3 class="pb-1 mb-2">
+        <a class="d-block fs-sm fw-medium text-truncate" href="shop-product-general-electronics.html">
+          <span class="animate-target">Xiaomi Wireless Buds Pro</span>
+        </a>
+      </h3>
+      <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
+        <div class="h5 lh-1 mb-0">$129.99 <del class="text-body-tertiary fs-sm fw-normal">$156.00</del></div>
+        <button type="button" class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2" aria-label="Add to Cart">
+          <i class="ci-shopping-cart fs-base animate-target"></i>
+        </button>
+      </div>
+      <div class="progress mb-2" role="progressbar" aria-label="Available in stock" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 4px">
+        <div class="progress-bar rounded-pill" style="width: 25%"></div>
+      </div>
+      <div class="text-body-secondary fs-sm">Available: <span class="text-dark-emphasis fw-medium">112</span></div>
+    </div>
+    
+</body>
+<footer>
+    <script src="assets/js/main.min.js"></script>
+    <!--<script src="assets/js/1.jquery-3.7.1.min.js"></script>-->
+    <!--<script src="assets/js/2.bootstrap.min.js"></script>-->
+    <!-- \Users\86828\Documents\projects\gulpv3\node_modules\bootstrap\dist\css\bootstrap.min.css -->
+    
+    <footer class="footer container text-center">
+    
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">Камни</label>
+    
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">Изделия</label>
+    
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3">Васту</label>
+        </div>
+    </footer></footer>
+</html>
