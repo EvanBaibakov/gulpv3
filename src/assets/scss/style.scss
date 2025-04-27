@@ -1,12 +1,17 @@
-$theme-colors: ( "primary": rgb(84, 134, 184), "dark": #2b2e41b2);
+$theme-colors: (
+    "primary": rgb(30, 47, 64),
+    "dark": #2b2e41b2
+);
 @import "node_modules/bootstrap/scss/bootstrap";
+
 body {
     padding-top: 10px;
     margin-bottom: 10px;
 }
 
 header {
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+    padding: 10px 0;
 }
 
 .footer {
@@ -19,18 +24,17 @@ header {
     background-color: rgb(87, 6, 101);
 }
 
- :root {
-    --color1: #28332e;
+:root {
+    --color1: #878e8b;
     --color2: #52339a;
+}
+.card-img-top {
+    border-radius: 30px;
 }
 
 header,
 footer,
 section {
-    padding: 10px 0;
-}
-
-header {
     padding: 10px 0;
 }
 
@@ -41,8 +45,6 @@ footer {
     background: url(../images/vector/time.png), -moz-linear-gradient(left, var(--color1) 0%, var(--color2) 100%);
     background: url(../images/vector/time.png), -webkit-linear-gradient(left, var(--color1) 0%), var(--color2) 100%;
     background: url(../images/vector/time.png), linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
-    /*filter: url(../fonts/time.png), progit:DXImageTransform.Microsoft.gradient( startColorstr=var(--color1),
-endColorstr=var(--color2),GradientType=1 );*/
     background-size: contain;
 }
 
@@ -85,7 +87,6 @@ endColorstr=var(--color2),GradientType=1 );*/
     color: var(--bs-white);
     background-color: var(--color1);
 }
-
 
 /* О курсе */
 

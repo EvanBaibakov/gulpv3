@@ -29,9 +29,9 @@
     --bs-gray-700: #495057;
     --bs-gray-800: #343a40;
     --bs-gray-900: #212529;
-    --bs-primary: rgb(84, 134, 184);
+    --bs-primary: rgb(30, 47, 64);
     --bs-dark: rgba(43, 46, 65, 0.6980392157);
-    --bs-primary-rgb: 84, 134, 184;
+    --bs-primary-rgb: 30, 47, 64;
     --bs-dark-rgb: 43, 46, 65;
     --bs-primary-text-emphasis: #052c65;
     --bs-secondary-text-emphasis: #2b2f32;
@@ -3365,20 +3365,20 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-    --bs-btn-color: #000;
-    --bs-btn-bg: rgb(84, 134, 184);
-    --bs-btn-border-color: rgb(84, 134, 184);
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #6e98c3;
-    --bs-btn-hover-border-color: #6592bf;
-    --bs-btn-focus-shadow-rgb: 71, 114, 156;
-    --bs-btn-active-color: #000;
-    --bs-btn-active-bg: #769ec6;
-    --bs-btn-active-border-color: #6592bf;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(30, 47, 64);
+    --bs-btn-border-color: rgb(30, 47, 64);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #1a2836;
+    --bs-btn-hover-border-color: #182633;
+    --bs-btn-focus-shadow-rgb: 64, 78, 93;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #182633;
+    --bs-btn-active-border-color: #172330;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #000;
-    --bs-btn-disabled-bg: rgb(84, 134, 184);
-    --bs-btn-disabled-border-color: rgb(84, 134, 184);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgb(30, 47, 64);
+    --bs-btn-disabled-border-color: rgb(30, 47, 64);
 }
 
 .btn-dark {
@@ -3399,19 +3399,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-primary {
-    --bs-btn-color: rgb(84, 134, 184);
-    --bs-btn-border-color: rgb(84, 134, 184);
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: rgb(84, 134, 184);
-    --bs-btn-hover-border-color: rgb(84, 134, 184);
-    --bs-btn-focus-shadow-rgb: 84, 134, 184;
-    --bs-btn-active-color: #000;
-    --bs-btn-active-bg: rgb(84, 134, 184);
-    --bs-btn-active-border-color: rgb(84, 134, 184);
+    --bs-btn-color: rgb(30, 47, 64);
+    --bs-btn-border-color: rgb(30, 47, 64);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgb(30, 47, 64);
+    --bs-btn-hover-border-color: rgb(30, 47, 64);
+    --bs-btn-focus-shadow-rgb: 30, 47, 64;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(30, 47, 64);
+    --bs-btn-active-border-color: rgb(30, 47, 64);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: rgb(84, 134, 184);
+    --bs-btn-disabled-color: rgb(30, 47, 64);
     --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: rgb(84, 134, 184);
+    --bs-btn-disabled-border-color: rgb(30, 47, 64);
     --bs-gradient: none;
 }
 
@@ -7212,7 +7212,7 @@ textarea.form-control-lg {
 }
 
 .text-bg-primary {
-    color: #000 !important;
+    color: #fff !important;
     background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -7227,8 +7227,8 @@ textarea.form-control-lg {
 }
 
 .link-primary:hover, .link-primary:focus {
-    color: RGBA(118, 158, 198, var(--bs-link-opacity, 1)) !important;
-    text-decoration-color: RGBA(118, 158, 198, var(--bs-link-underline-opacity, 1)) !important;
+    color: RGBA(24, 38, 51, var(--bs-link-opacity, 1)) !important;
+    text-decoration-color: RGBA(24, 38, 51, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-dark {
@@ -13062,7 +13062,8 @@ body {
 }
 
 header {
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+    padding: 10px 0;
 }
 
 .footer {
@@ -13076,8 +13077,12 @@ header {
 }
 
 :root {
-    --color1: #28332e;
+    --color1: #878e8b;
     --color2: #52339a;
+}
+
+.card-img-top {
+    border-radius: 30px;
 }
 
 header,
@@ -13086,17 +13091,11 @@ section {
     padding: 10px 0;
 }
 
-header {
-    padding: 10px 0;
-}
-
 header,
 footer {
   /* Permalink*/
     background: url(../images/vector/time.png), var(--color1);
     background: url(../images/vector/time.png), linear-gradient(to right, var(--color1) 0%, var(--color2) 100%);
-  /*filter: url(../fonts/time.png), progit:DXImageTransform.Microsoft.gradient( startColorstr=var(--color1),
-  endColorstr=var(--color2),GradientType=1 );*/
     background-size: contain;
 }
 

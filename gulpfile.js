@@ -77,7 +77,7 @@ function html() {
 function css() {
     return src(path.src.css, { base: srcPath + "assets/scss/" }) //возращаем 
         .pipe(plumber({
-            errorHandler: function(err) {
+            errorHandler: function (err) {
                 notify.onError({
                     title: "SCSS nesrabotal",
                     messege: "Error: <%= error.messege %>"
@@ -110,7 +110,7 @@ function css() {
 function js() {
     return src(path.src.js, { base: srcPath + "assets/js/" })
         .pipe(plumber({
-            errorHandler: function(err) {
+            errorHandler: function (err) {
                 notify.onError({
                     title: "js nesrabotal",
                     messege: "Error: <%= error.messege %>"
