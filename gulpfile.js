@@ -1,8 +1,9 @@
 "use strict" // строгий режим
-
+// конст это подключка модулей в проект 1
 const { src, dest } = require("gulp") //  считывать записывать
 const gulp = require("gulp") // обьявляем понстанту и пишем рекваер
-const autoprefixer = require("gulp-autoprefixer") // сисс свойства вебкит
+// конструкция по умолчению, далше индивидуально
+const autoprefixer = require("gulp-autoprefixer") // сисс свойства вебкит нужен чтоб выставлять префиксы для сиссс файлов
 const cssbeautify = require("gulp-cssbeautify"); // красивый сисс фаил
 const removeComments = require('gulp-strip-css-comments'); // удаляет коменты и минифицирует фаил сисс
 const rename = require("gulp-rename"); // переминивывает в мин сисс
@@ -10,7 +11,7 @@ const sass = require("gulp-sass")(require('sass')); //gulp sass и модуль 
 const cssnano = require("gulp-cssnano"); // сжимает сисс фаил
 const uglify = require("gulp-uglify"); // минификация джис фаила
 const plumber = require("gulp-plumber"); //пламбер склеивает фалилы и в случае ощибок дает запуститься общему файил
-const rigger = require('gulp-rigger'); // добавил в сборку самостоятельно так как не читался джиэс
+const rigger = require('gulp-rigger'); // добавил в сборку самостоятельно так как не читался джиэс склеиваем джава скрипт файлы, можно разрабить несколько файлов логики, а галм ригер скомпилирует их в дест одним
 const panini = require("panini"); // работа в шаблоне html
 const imagemin = require("gulp-imagemin"); //immeyaem kartinki
 const del = require("del"); // не работает сжимает картинки проверить версионность прописать как делать откат версии
@@ -18,6 +19,7 @@ const del = require("del"); // не работает сжимает картин
 const notify = require("gulp-notify") // плагин дел также надо проверять на корректность работы сборки либо откат до шестой версии
 const browserSync = require("browser-sync").create(); // локальный сервер и настройка параметров
 
+//2
 
 /*Paths пути вместо етой команды обривеатура паф с приставкой*/
 const srcPath = "src/"
@@ -30,7 +32,7 @@ const path = {
         js: distPath + "assets/js/",
         images: distPath + "assets/images/",
         fonts: distPath + "assets/fonts/"
-    },
+    }, // подпапки идут через две звездочки
     src: {
         html: srcPath + "*.html",
         css: srcPath + "assets/scss/*.scss",
@@ -118,9 +120,9 @@ function js() {
                 this.emit('end');
             }
         }))
-        .pipe(rigger())
+        .pipe(rigger())//собираем воедино
         .pipe(dest(path.build.js))
-        .pipe(uglify())
+        .pipe(uglify()) // минификация
         .pipe(rename({
             suffix: ".min",
             extname: ".js"
@@ -146,16 +148,13 @@ function images() {
         .pipe(browserSync.reload({ stream: true }));
 
 }
-
 function fonts() {
-    return src(path.src.images, { base: srcPath + "assets/fonts/" })
+    return src(path.src.fonts, { base: srcPath + "assets/fonts/" })
         .pipe(browserSync.reload({ stream: true }));
 }
-
 function clean() {
     return del(path.clean) // используем функцию дел далее модуль паф и клинп
 }
-
 function watchFiles() {
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css)
@@ -167,7 +166,7 @@ function watchFiles() {
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts))
 const watch = gulp.parallel(build, watchFiles, serve)
 
-
+//3
 exports.html = html
 exports.css = css
 exports.js = js
