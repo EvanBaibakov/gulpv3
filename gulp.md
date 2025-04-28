@@ -5,6 +5,8 @@ npm --v
 npm install -- global gulp-cli
 
 npm install --save-dev gulp
+
+npm i //двигаемся в новую папку
 #### продолжение
 npm i gulp-autoprefixer --save-dev
 
@@ -37,4 +39,6 @@ npm i del@6.0.0
 npm i panini --save-dev
 
 npm i browser-sync --save-dev
+
+data gi son ili mogno i yml
 
