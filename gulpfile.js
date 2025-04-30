@@ -51,7 +51,6 @@ const path = {
     },
     clean: "./" + distPath
 }
-
 function serve() {
     browserSync.init({
         server: {
@@ -59,23 +58,20 @@ function serve() {
         }
     })
 }
-
-
 function html() {
     panini.refresh()
     return src(path.src.html, { base: srcPath }) // путь к html failu // base srcPath запасной вариант что ничего не ломалось 
         .pipe(plumber())
         //пайп это метод задача срц считываем дест записываем
         .pipe(panini({
-            root: srcPath,
+            root: srcPath, //+ "pages/"
             layouts: srcPath + "tpl/layouts/",
             partials: srcPath + "tpl/partials/",
             data: srcPath + "tpl/data/"
         }))
         .pipe(dest(path.build.html)) //доставка куда доставить построенное 
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({ stream: true })); //шоб работал
 }
-
 function css() {
     return src(path.src.css, { base: srcPath + "assets/scss/" }) //возращаем 
         .pipe(plumber({
@@ -108,7 +104,6 @@ function css() {
     0
 
 }
-
 function js() {
     return src(path.src.js, { base: srcPath + "assets/js/" })
         .pipe(plumber({
@@ -130,7 +125,6 @@ function js() {
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({ stream: true }));
 }
-
 function images() {
     return src(path.src.images, { base: srcPath + "assets/images/" })
         .pipe(imagemin([
@@ -163,7 +157,9 @@ function watchFiles() {
     gulp.watch([path.watch.fonts], fonts)
 }
 
+// Очередность процесов
 const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts))
+// Запускаем праралельно наблюдение и вывод в браузер
 const watch = gulp.parallel(build, watchFiles, serve)
 
 //3
