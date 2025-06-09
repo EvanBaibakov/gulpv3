@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": rgb(30, 47, 64),
+    "primary": rgb(50, 54, 59),
     "dark": #2b2e41b2
 );
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -20,13 +20,13 @@ header {
 }
 
 .navbar {
-    border-bottom: 20px solid #432365;
-    background-color: rgb(87, 6, 101);
+    border-bottom: 20px solid #f1ee3a;
+    background-color: rgb(225, 222, 16);
 }
 
 :root {
-    --color1: #878e8b;
-    --color2: #52339a;
+    --color1: #161615;
+    --color2: #ecc91b;
 }
 
 .card-img-top {
