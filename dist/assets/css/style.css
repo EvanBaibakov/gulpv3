@@ -13079,6 +13079,7 @@ header {
 :root {
     --color1: #878e8b;
     --color2: #ebcf1e;
+    border: none;
 }
 
 .card-img-top {
