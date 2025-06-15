@@ -125,4 +125,4 @@ Card subtitle
 
 Заказ В резерв редакт фаил
 
-change izm
+change izm fiksim
